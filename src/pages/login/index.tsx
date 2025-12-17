@@ -3,17 +3,8 @@ import { Label } from "@/components/ui/label";
 import { Content } from "./styles";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-
-/* import all the icons in Free Solid, Free Regular, and Brands styles */
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
-import { CheckIcon, IdCardIcon, LockIcon } from "lucide-react";
 import { useState } from "react";
-
-library.add(fas, far, fab)
 
 const LoginPage: React.FC = () => {
     const [tabValue, setTabValue] = useState("student");
@@ -23,7 +14,7 @@ const LoginPage: React.FC = () => {
             <div className="login-card">
                 <div className="bg-linear-310 from-[#4F46E5] to-[#9333EA]">
                     <div className="icon-container">
-                        <FontAwesomeIcon className="text-[24px] text-white" icon="fa-solid fa-graduation-cap" />
+                        <FontAwesomeIcon className="text-[24px] text-white" icon="graduation-cap" />
                     </div>
 
                     <h1 className="title">EduDúvidas</h1>
@@ -32,21 +23,21 @@ const LoginPage: React.FC = () => {
                     <div className="list">
                         <div className="item">
                             <div className="icon-container small">
-                                <CheckIcon className="text-[14px] text-white" />
+                                <FontAwesomeIcon className="text-[14px] text-white" icon="check" />
                             </div>
                             Discussões em tempo real
                         </div>
 
                         <div className="item">
                             <div className="icon-container small">
-                                <CheckIcon className="text-[14px] text-white" />
+                                <FontAwesomeIcon className="text-[14px] text-white" icon="check" />
                             </div>
                             Gestão inteligente de canais
                         </div>
 
                         <div className="item">
                             <div className="icon-container small">
-                                <CheckIcon className="text-[14px] text-white" />
+                                <FontAwesomeIcon className="text-[14px] text-white" icon="check" />
                             </div>
                             Acompanhamento de progresso
                         </div>
@@ -61,18 +52,18 @@ const LoginPage: React.FC = () => {
 
                     <div className="form">
                         <Tabs defaultValue="student" onValueChange={value => setTabValue(value)}>
-                            <TabsList className="w-full mb-[24px]">
+                            <TabsList className="w-full mb-6">
                                 <TabsTrigger value="student" className={tabValue == "student" ? "text-[#4F46E5]" : "text-[#4B5563]"}>
-                                    <FontAwesomeIcon icon="fa-solid fa-user-graduate" />
+                                    <FontAwesomeIcon icon="user-graduate" />
                                     Aluno
                                 </TabsTrigger>
                                 <TabsTrigger value="teacher" className={tabValue == "teacher" ? "text-[#4F46E5]" : "text-[#4B5563]"}>
-                                    <FontAwesomeIcon icon="fa-solid fa-chalkboard-user" />
+                                    <FontAwesomeIcon icon="chalkboard-user" />
                                     Professor
                                 </TabsTrigger>
                             </TabsList>
                             <TabsContent value="student">
-                               <div className="grid w-full items-center gap-3 mb-[20px]">
+                               <div className="grid w-full items-center gap-3 mb-5">
                                     <Label htmlFor="ra">Registro Acadêmico</Label>
                                     <InputGroup>
                                         <InputGroupInput
@@ -82,13 +73,13 @@ const LoginPage: React.FC = () => {
                                             placeholder="Digite seu RA"
                                         />
                                         <InputGroupAddon>
-                                            <IdCardIcon />
+                                            <FontAwesomeIcon icon="id-card" />
                                         </InputGroupAddon>
                                     </InputGroup>
                                 </div> 
                             </TabsContent>
                             <TabsContent value="teacher">
-                                <div className="grid w-full items-center gap-3 mb-[20px]">
+                                <div className="grid w-full items-center gap-3 mb-5">
                                     <Label htmlFor="matricula">Matrícula</Label>
                                     <InputGroup>
                                         <InputGroupInput
@@ -98,14 +89,14 @@ const LoginPage: React.FC = () => {
                                             placeholder="Digite sua matrícula"
                                         />
                                         <InputGroupAddon>
-                                            <IdCardIcon />
+                                            <FontAwesomeIcon icon="id-card" />
                                         </InputGroupAddon>
                                     </InputGroup>
                                 </div>
                             </TabsContent>
                         </Tabs>
 
-                        <div className="grid w-full items-center gap-3 mb-[20px]">
+                        <div className="grid w-full items-center gap-3 mb-5">
                             <Label htmlFor="password">Senha</Label>
                             <InputGroup>
                                 <InputGroupInput
@@ -115,12 +106,12 @@ const LoginPage: React.FC = () => {
                                     placeholder="Informe sua senha"
                                 />
                                 <InputGroupAddon>
-                                    <LockIcon />
+                                    <FontAwesomeIcon icon="lock" />
                                 </InputGroupAddon>
                             </InputGroup>
                         </div>
 
-                        <div className="flex flex-row gap-6 justify-between mb-[20px]">
+                        <div className="flex flex-row gap-6 justify-between mb-5">
                             <div className="flex items-center gap-3">
                                 <Checkbox
                                     id="remember"
