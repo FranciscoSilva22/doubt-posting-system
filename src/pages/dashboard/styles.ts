@@ -103,5 +103,91 @@ export const Content = styled.div`
 
     aside {
         grid-area: aside-content;
+        padding: 24px;
+        border-left: 1px solid #E5E7EB;
+
+        .section {
+            margin-bottom: 16px;
+
+            .section-title {
+                color: #111827;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 16px;
+            }
+
+            .section-container {
+                display: flex;
+                gap: 12px;
+
+                .card {
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    border-width: 1px;
+                    border-radius: 8px;
+                    padding: 12px;
+
+                    .value {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                }
+
+                .topic {
+                    background-color: #F9FAFB;
+                    border: 1px solid #F3F4F6;
+                    border-radius: 8px;
+                    padding: 12px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .label {
+                        color: #374151;
+                    }
+
+                    .count {
+                        color: #9333EA;
+                        font-size: 0.86rem;
+                        font-weight: 700;
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+                    }
+                }
+
+                .adm {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 12px;
+                    align-items: center;
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 100%;
+                        object-fit: cover;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+
+                        .adm-name {
+                            font-weight: 500;
+                            color: #111827;
+                        }
+
+                        .adm-role {
+                            font-size: 0.86rem;
+                            color: #6B7280;
+                        }
+                    }
+                }
+            }
+        }
     }
 `;
